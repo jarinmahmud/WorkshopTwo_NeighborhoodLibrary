@@ -5,7 +5,7 @@ Welcome to Neighborhood Library
 2. Show checked out books
 3. Exit
 
-// slelecting 1
+// selecting 1
 will print the available books, which means which is not checked out
 ask for the id of the book to check out
 entering id, will ask for the name
@@ -19,6 +19,9 @@ ask for the id of the book to check in
 by entering id, the book will be checked in and prompt will be given to go back to the screen.
 
 invalid option would print that it is invalid command
+
+//selecting 3
+will finish the process
 
 //after each command, home prompt will be given for the user
 
