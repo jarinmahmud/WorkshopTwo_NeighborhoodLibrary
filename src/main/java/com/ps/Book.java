@@ -7,14 +7,16 @@ public class Book {
     private boolean isCheckedOut;
     private String checkedOutTo;
 
+    // Constructor
     public Book(int id, String isbn, String title, boolean isCheckedOut, String checkedOutTo) {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
-        this.isCheckedOut = false;
+        this.isCheckedOut = isCheckedOut;
         this.checkedOutTo = checkedOutTo;
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -43,33 +45,25 @@ public class Book {
         return isCheckedOut;
     }
 
-    public void setCheckedOut(boolean checkedOut) {
-        isCheckedOut = checkedOut;
-    }
-
     public String getCheckedOutTo() {
         return checkedOutTo;
     }
 
-    public void setCheckedOutTo(String checkedOutTo) {
-        this.checkedOutTo = checkedOutTo;
-    }
-    public String checkOut(String name){
-        return name;
+    // Method to check out the book
+    public void checkOut(String name) {
+        isCheckedOut = true;
+        checkedOutTo = name;
     }
 
-    public boolean checkIn(boolean checkIn){
-        return checkIn;
+    // Method to check in the book
+    public void checkIn() {
+        isCheckedOut = false;
+        checkedOutTo = "";
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", isbn='" + isbn + '\'' +
-                ", title='" + title + '\'' +
-                ", isCheckedOut=" + isCheckedOut +
-                ", checkedOutTo='" + checkedOutTo + '\'' +
-                '}';
+        return "ID: " + id + ", ISBN: " + isbn + ", Title: " + title + ", Checked Out: " + isCheckedOut +
+                (isCheckedOut ? ", Checked Out To: " + checkedOutTo : "");
     }
 }

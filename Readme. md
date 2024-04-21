@@ -1,0 +1,24 @@
+//scratch of CLI
+
+Welcome to Neighborhood Library
+1. Show available books
+2. Show checked out books
+3. Exit
+
+// slelecting 1
+will print the available books, which means which is not checked out
+ask for the id of the book to check out
+entering id, will ask for the name
+by entering name, the book will be checked out and prompt will be given to go back to the screen.
+
+invalid option would print that it is invalid command
+
+// selecting 2
+will print the checked out books
+ask for the id of the book to check in
+by entering id, the book will be checked in and prompt will be given to go back to the screen.
+
+invalid option would print that it is invalid command
+
+//after each command, home prompt will be given for the user
+
